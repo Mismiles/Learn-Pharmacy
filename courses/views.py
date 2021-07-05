@@ -13,7 +13,7 @@ from .models import Course, Module, Content
 from .forms import ModuleFormSet
 from django.db.models import Count
 from .models import Subject
-
+from django.views.generic.detail import DetailView
 
 class OwnerMixin(object):
     def get_queryset(self):
@@ -191,3 +191,7 @@ class CourseListView(TemplateResponseMixin, View):
         return self.render_to_response({'subjects': subjects,
                                         'subject': subject,
                                         'courses': courses})
+
+class CourseDetailView(DetailView):
+    model = Course
+    template_name = 'courses/course/detail.html'
