@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'courses.apps.CoursesConfig',
     'students.apps.StudentsConfig',
     'embed_video',
+    'memcache_status',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
